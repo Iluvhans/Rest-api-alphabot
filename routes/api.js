@@ -591,6 +591,23 @@ router.get('/cewe/hannaowo', async (req, res, next) => {
          	res.json(loghandler.error)
 })
 })
+router.get('/cewe/hakken', async (req, res, next) => {
+        var apikeyInput = req.query.apikey
+	if(!apikeyInput) return res.json(loghandler.notparam)	
+	if (apikeyInput != 'Alphabot')  return res.json(loghandler.invalidKey)
+       fetch(encodeURI(`https://raw.githubusercontent.com/Iluvhans/Apayah/main/hakken.json`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+        var result = data[Math.floor(Math.random() * data.length)];
+             res.json({
+             	author: 'Zeeone',
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 //End Asupan
 
 //NSFW
