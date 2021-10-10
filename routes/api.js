@@ -591,7 +591,7 @@ router.get('/cewe/hannaowo', async (req, res, next) => {
          	res.json(loghandler.error)
 })
 })
-router.get('/cewe/hakken', async (req, res, next) => {
+router.get('/asupan/hakken', async (req, res, next) => {
         var apikeyInput = req.query.apikey
 	if(!apikeyInput) return res.json(loghandler.notparam)	
 	if (apikeyInput != 'Alphabot')  return res.json(loghandler.invalidKey)
@@ -601,7 +601,7 @@ router.get('/cewe/hakken', async (req, res, next) => {
         var result = data;
         var result = data[Math.floor(Math.random() * data.length)];
              res.json({
-             	author: 'Zeeone',
+             	author: 'iluvhans',
                  result
              })
          })
