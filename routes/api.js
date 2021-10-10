@@ -608,6 +608,7 @@ router.get('/cewe/hakken', async (req, res, next) => {
          .catch(e => {
          	res.json(loghandler.error)
 })
+})
 //End Asupan
 
 //NSFW
